@@ -1,0 +1,26 @@
+{
+  "name": "jsa-website-tailwind",
+  "version": "1.0.0",
+  "description": "UCSD JSA website built using Tailwind CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j1sun/jsa-website-tailwind.git"
+  },
+  "author": "Justin Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j1sun/jsa-website-tailwind/issues"
+  },
+  "homepage": "https://github.com/j1sun/jsa-website-tailwind#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "tailwindcss": "^1.1.2"
+  }
+}
