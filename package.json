@@ -20,7 +20,9 @@
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-html-postcss": "^7.1.4",
     "gulp-postcss": "^8.0.0",
+    "postcss-import": "^12.0.1",
     "tailwindcss": "^1.1.2"
   }
 }
