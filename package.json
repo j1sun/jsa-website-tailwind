@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/j1sun/jsa-website-tailwind#readme",
   "devDependencies": {
+    "animate.css": "^3.7.2",
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",

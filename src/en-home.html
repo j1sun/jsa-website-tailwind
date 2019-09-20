@@ -6,6 +6,7 @@
     <title>UCSD JSA Homepage</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./animate.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
@@ -24,23 +25,22 @@
   <body class="antialiased bg-red-400 select-none">
 
     <!--Page banner-->
-    <div class="flex flex-col items-center w-full h-auto bg-cover bg-top bg-fixed" style="background-image: url('./img/bkgd-collage.jpg')">
-      <div class="max-w-xs w-2/3 mt-8 mb-6">
+    <div class="flex flex-col justify-center items-center w-full h-auto min-h-screen bg-cover bg-top bg-fixed border-b-4 border-red-400" style="background-image: url('./img/bkgd-collage.jpg')">
+      <div class="animated fadeIn slow max-w-xs w-2/3 mt-8 mb-6">
         <img src="./img/logo-white.png" alt="JSA Logo in White">
       </div>
-      <div class="flex flex-col w-screen max-w-md items-start">
+      <div class="animated fadeIn delay-1s flex flex-col w-screen max-w-md items-start">
         <h1 class="mb-6 mx-8 font-Montserrat font-semibold text-5xl text-white leading-tight">Bringing Japan to UCSD.</h1>
         <a class="mb-12 mx-8 bg-red-400 rounded-full font-Noto-Sans-JP text-red-100 text-base px-6 py-4" href="./en-about.html" title="Who we are">Find out who we are</a>
       </div>
+      <svg class="animated fadeInDown delay-2s inset-x-0 bottom-0 mx-auto w-24 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+      </svg>
     </div>
-
-    <!--Divider-->
-    <div class="w-full h-1 bg-red-400"></div>
 
     <!--Event Header-->
     <div class="w-full bg-red-100 flex flex-wrap items-baseline self-start">
       <h2 class="ml-6 mt-8 mb-4 font-Montserrat text-2xl text-gray-700 font-semibold">Upcoming Events</h2>
-      <a href="#" class="ml-6 mb-2 font-Noto-Sans-JP text-base text-gray-600 underline" title="Our Events">More info</a>
     </div>
 
     <!--Event Cards-->
@@ -51,66 +51,88 @@
         <div class="h-48 bg-cover text-center overflow-hidden" style="background-image: url('./img/event-1-sample.jpg')" alt="Event Image"></div>
         <div class="h-48 bg-white p-4 flex flex-col justify-between">
             <div class="">
-              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event 1</h4>
+              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event</h4>
               <div class="flex flex-row mb-2">
-                <svg class="fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path class="heroicon-ui" d="M17 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h2V3a1 1 0 1 1 2 0v1h6V3a1 1 0 0 1 2 0v1zm-2 2H9v1a1 1 0 1 1-2 0V6H5v4h14V6h-2v1a1 1 0 0 1-2 0V6zm4 6H5v8h14v-8z"/>
+                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/>
                 </svg>
                 <p class="text-gray-700 font-Noto-Sans-JP text-base">January 1, 10:00am</p>
               </div>
               <div class="flex flex-row">
-                <svg class="fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
                 </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">Center Hall 109</p>
+                <p class="text-gray-700 font-Noto-Sans-JP text-base">Location</p>
               </div>
             </div>
-            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">Event Page</a>
+            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">View event</a>
         </div>
       </div>
 
+      <!--Event Card TODO: Extract as component and extract classes-->
       <div class="m-8 max-w-sm w-4/5 shadow-lg rounded-lg overflow-hidden">
-        <div class="h-48 bg-cover text-center overflow-hidden" style="background-image: url('./img/event-2-sample.jpg')" alt="Event Image"></div>
+        <div class="h-48 bg-cover text-center overflow-hidden" style="background-image: url('./img/event-1-sample.jpg')" alt="Event Image"></div>
         <div class="h-48 bg-white p-4 flex flex-col justify-between">
             <div class="">
-              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">JSA EYP (End of Year Party)</h4>
+              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event</h4>
               <div class="flex flex-row mb-2">
-                <svg class="fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path class="heroicon-ui" d="M17 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h2V3a1 1 0 1 1 2 0v1h6V3a1 1 0 0 1 2 0v1zm-2 2H9v1a1 1 0 1 1-2 0V6H5v4h14V6h-2v1a1 1 0 0 1-2 0V6zm4 6H5v8h14v-8z"/>
+                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/>
                 </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">June 14, 6:00pm</p>
+                <p class="text-gray-700 font-Noto-Sans-JP text-base">January 1, 10:00am</p>
               </div>
               <div class="flex flex-row">
-                <svg class="fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
                 </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">Meet at Center Hall</p>
+                <p class="text-gray-700 font-Noto-Sans-JP text-base">Location</p>
               </div>
             </div>
-            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">Event Page</a>
+            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">View event</a>
         </div>
       </div>
 
+      <!--Event Card TODO: Extract as component and extract classes-->
       <div class="m-8 max-w-sm w-4/5 shadow-lg rounded-lg overflow-hidden">
-        <div class="h-48 bg-cover text-center overflow-hidden" style="background-image: url('./img/event-3-sample.jpg')" alt="Event Image"></div>
+        <div class="h-48 bg-cover text-center overflow-hidden" style="background-image: url('./img/event-1-sample.jpg')" alt="Event Image"></div>
         <div class="h-48 bg-white p-4 flex flex-col justify-between">
             <div class="">
-              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event 3</h4>
+              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event</h4>
               <div class="flex flex-row mb-2">
-                <svg class="fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path class="heroicon-ui" d="M17 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h2V3a1 1 0 1 1 2 0v1h6V3a1 1 0 0 1 2 0v1zm-2 2H9v1a1 1 0 1 1-2 0V6H5v4h14V6h-2v1a1 1 0 0 1-2 0V6zm4 6H5v8h14v-8z"/>
+                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/>
                 </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">December 31, 12:00pm</p>
+                <p class="text-gray-700 font-Noto-Sans-JP text-base">January 1, 10:00am</p>
               </div>
               <div class="flex flex-row">
-                <svg class="fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
                 </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">Meet at Library Walk</p>
+                <p class="text-gray-700 font-Noto-Sans-JP text-base">Location</p>
               </div>
             </div>
-            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">Event Page</a>
+            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">View event</a>
         </div>
+      </div>
+
+    </div>
+
+    <!--More JSA Header-->
+    <div class="w-full bg-red-200 flex flex-wrap items-baseline self-start">
+      <h2 class="ml-6 mt-8 font-Montserrat text-2xl text-gray-700 font-semibold">More Info</h2>
+    </div>
+
+    <!--Info Paragraphs-->
+    <div class="flex flex-col md:flex-row justify-center w-full p-8 md:py-12 bg-red-200">
+      <div class="mb-8 bg-red-100 rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col md:mr-20">
+        <h2 class="mb-2 font-Montserrat text-2xl text-gray-700 font-medium">Looking to practice Japanese?</h2>
+        <p class="mb-6 font-Noto-Sans-JP text-gray-700">Lorem ipsum Language Table dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie at elementum eu facilisis sed. Ante in nibh mauris cursus mattis. Ac tortor dignissim convallis aenean et. Ac odio tempor orci dapibus ultrices in iaculis.</p>
+        <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">Find out more</a>
+      </div>
+      <div class="mb-8 bg-red-100 rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col">
+          <h2 class="mb-2 font-Montserrat text-2xl text-gray-700 font-medium">Want more JSA?</h2>
+          <p class="mb-6 font-Noto-Sans-JP text-gray-700">Lorem ipsum JSA Hangout dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie at elementum eu facilisis sed. Ante in nibh mauris cursus mattis. Ac tortor dignissim convallis aenean et. Ac odio tempor orci dapibus ultrices in iaculis.</p>
+          <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="https://www.facebook.com/groups/217738491769779/" target="_blank" title="JSA Hangout Page">View page</a>
       </div>
     </div>
 
@@ -137,6 +159,9 @@
         </a>
       </div>
       <img class="w-40 mt-8 m-auto" src="./img/logo-red-700.png" alt="JSA Logo in Dark Red">
+      <div class="inline-block">
+        
+      </div>
       <p class="font-Noto-Sans-JP text-red-700 text-center text-sm pt-8 pb-8">© 2019 UCSD JSA. All rights reserved.</p>
     </div>
   </body>
