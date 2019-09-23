@@ -20,6 +20,9 @@ gulp.task('css', function () {
   gulp.src('./src/img/*')
     .pipe(gulp.dest('./dest/img/'));
 
+  gulp.src('./src/favicons/*')
+    .pipe(gulp.dest('./dest/favicons/'));
+
   return gulp.src('./src/*.css')
     .pipe(postcss(plugins))
     .pipe(gulp.dest('./dest'));
