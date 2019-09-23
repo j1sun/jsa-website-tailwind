@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>UCSD JSA Homepage</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" type="text/css" href="./animate.css">
 
@@ -31,7 +31,7 @@
       </div>
       <div class="animated fadeIn delay-1s flex flex-col w-screen max-w-md items-start">
         <h1 class="mb-6 mx-8 font-Montserrat font-semibold text-5xl text-white leading-tight">Bringing Japan to UCSD.</h1>
-        <a class="mb-12 mx-8 bg-red-400 rounded-full font-Noto-Sans-JP text-red-100 text-base px-6 py-4" href="./en-about.html" title="Who we are">Find out who we are</a>
+        <a class="mb-12 mx-8 bg-white rounded-full font-Montserrat font-semibold text-red-500 text-base px-6 py-4" href="./en-about.html" title="Who we are">Find out who we are</a>
       </div>
       <svg class="animated fadeInDown delay-2s inset-x-0 bottom-0 mx-auto w-24 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
@@ -40,7 +40,7 @@
 
     <!--Event Header-->
     <div class="w-full bg-red-100 flex flex-wrap items-baseline self-start">
-      <h2 class="ml-6 mt-8 mb-4 font-Montserrat text-2xl text-gray-700 font-semibold">Upcoming Events</h2>
+      <h2 class="ml-6 mt-8 mb-4 font-Montserrat text-xl text-gray-800 font-semibold">Upcoming Events</h2>
     </div>
 
     <!--Event Cards-->
@@ -49,69 +49,156 @@
       <!--Event Card TODO: Extract as component and extract classes-->
       <div class="m-8 max-w-sm w-4/5 shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 bg-cover text-center overflow-hidden" style="background-image:url(img/event-1-sample.jpg)" alt="Event Image"></div>
-        <div class="h-48 bg-white p-4 flex flex-col justify-between">
-            <div class="">
-              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event</h4>
-              <div class="flex flex-row mb-2">
-                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/>
-                </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">January 1, 10:00am</p>
-              </div>
-              <div class="flex flex-row">
-                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">Location</p>
-              </div>
+        <div class="relative h-48 bg-white p-4 flex flex-col justify-between">
+          <!--Background svg-->
+          <svg class="absolute bottom-0 right-0 fill-current text-gray-800 z-0" width="295" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="300" cy="100" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="100" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="100" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+          </svg>
+
+          <div class="z-10">
+            <h4 class="mb-4 text-gray-800 font-Montserrat font-semibold text-lg truncate">Event</h4>
+            <div class="flex flex-row mb-2">
+              <svg class="flex-none w-6 fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-7.59V4h2v5.59l3.95 3.95-1.41 1.41L9 10.41z"/>
+              </svg>
+              <p class="text-gray-600 font-Montserrat text-lg truncate">10AM</p>
             </div>
-            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">View event</a>
+            <div class="flex flex-row">
+              <svg class="flex-none w-6 fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+              </svg>
+              <p class="text-gray-600 font-Montserrat text-lg truncate">Location</p>
+            </div>
+          </div>
+          <div class="z-10 flex flex-row justify-between">
+            <a class="flex flex-row w-2/5 bg-red-400 py-2 px-4 rounded-full text-red-100" href="#" target="_blank" title="Google Calendar Event">
+              <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 3h2v2h6V3h2v2h2c1.1046 0 2 .8954 2 2v7h-2V9H5v10h9v2H5c-1.1046 0-2-.8954-2-2V7c0-1.1046.8954-2 2-2h2V3zm2 8H7v2h2v-2zm6 0h2v2h-2v-2zm-2 0h-2v2h2v-2zm-6 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm3 1v2h-2v2h2v2h2v-2h2v-2h-2v-2h-2z"/>
+              </svg>
+              <p class="w-full text-center font-Montserrat font-semibold text-base truncate">Calendar</p>
+            </a>
+            <a class="flex flex-row w-2/5 bg-red-400 py-2 px-4 rounded-full text-red-100" href="#" target="_blank" title="Facebook Event Page">
+              <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M18 3H6C4.3431 3 3 4.3431 3 6v12c0 1.6569 1.3431 3 3 3h4.5938v-6.3984H8.3086V12h2.2852v-1.9828c0-2.2553 1.3429-3.5016 3.3996-3.5016.9843 0 2.0144.1758 2.0144.1758v2.2149h-1.1355c-1.118 0-1.4661.6943-1.4661 1.4062V12h2.4961l-.399 2.6016h-2.0971V21H18c1.6569 0 3-1.3431 3-3V6c0-1.6569-1.3431-3-3-3z"/>
+              </svg>
+              <p class="w-full text-center font-Montserrat font-semibold text-base truncate">View</p>
+            </a>
+          </div>
         </div>
       </div>
 
       <!--Event Card TODO: Extract as component and extract classes-->
       <div class="m-8 max-w-sm w-4/5 shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 bg-cover text-center overflow-hidden" style="background-image:url(img/event-1-sample.jpg)" alt="Event Image"></div>
-        <div class="h-48 bg-white p-4 flex flex-col justify-between">
-            <div class="">
-              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event</h4>
-              <div class="flex flex-row mb-2">
-                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/>
-                </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">January 1, 10:00am</p>
-              </div>
-              <div class="flex flex-row">
-                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">Location</p>
-              </div>
+        <div class="relative h-48 bg-white p-4 flex flex-col justify-between">
+          <!--Background svg-->
+          <svg class="absolute bottom-0 right-0 fill-current text-gray-800 z-0" width="295" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="300" cy="100" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="100" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="100" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+          </svg>
+
+          <div class="z-10">
+            <h4 class="mb-4 text-gray-800 font-Montserrat font-semibold text-lg truncate">Event</h4>
+            <div class="flex flex-row mb-2">
+              <svg class="flex-none w-6 fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-7.59V4h2v5.59l3.95 3.95-1.41 1.41L9 10.41z"/>
+              </svg>
+              <p class="text-gray-600 font-Montserrat text-lg truncate">10AM</p>
             </div>
-            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">View event</a>
+            <div class="flex flex-row">
+              <svg class="flex-none w-6 fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+              </svg>
+              <p class="text-gray-600 font-Montserrat text-lg truncate">Location</p>
+            </div>
+          </div>
+          <div class="z-10 flex flex-row justify-between">
+            <a class="flex flex-row w-2/5 bg-red-400 py-2 px-4 rounded-full text-red-100" href="#" target="_blank" title="Google Calendar Event">
+              <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 3h2v2h6V3h2v2h2c1.1046 0 2 .8954 2 2v7h-2V9H5v10h9v2H5c-1.1046 0-2-.8954-2-2V7c0-1.1046.8954-2 2-2h2V3zm2 8H7v2h2v-2zm6 0h2v2h-2v-2zm-2 0h-2v2h2v-2zm-6 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm3 1v2h-2v2h2v2h2v-2h2v-2h-2v-2h-2z"/>
+              </svg>
+              <p class="w-full text-center font-Montserrat font-semibold text-base truncate">Calendar</p>
+            </a>
+            <a class="flex flex-row w-2/5 bg-red-400 py-2 px-4 rounded-full text-red-100" href="#" target="_blank" title="Facebook Event Page">
+              <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M18 3H6C4.3431 3 3 4.3431 3 6v12c0 1.6569 1.3431 3 3 3h4.5938v-6.3984H8.3086V12h2.2852v-1.9828c0-2.2553 1.3429-3.5016 3.3996-3.5016.9843 0 2.0144.1758 2.0144.1758v2.2149h-1.1355c-1.118 0-1.4661.6943-1.4661 1.4062V12h2.4961l-.399 2.6016h-2.0971V21H18c1.6569 0 3-1.3431 3-3V6c0-1.6569-1.3431-3-3-3z"/>
+              </svg>
+              <p class="w-full text-center font-Montserrat font-semibold text-base truncate">View</p>
+            </a>
+          </div>
         </div>
       </div>
 
       <!--Event Card TODO: Extract as component and extract classes-->
       <div class="m-8 max-w-sm w-4/5 shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 bg-cover text-center overflow-hidden" style="background-image:url(img/event-1-sample.jpg)" alt="Event Image"></div>
-        <div class="h-48 bg-white p-4 flex flex-col justify-between">
-            <div class="">
-              <h4 class="mb-4 text-gray-700 font-Montserrat font-semibold text-xl truncate">Event</h4>
-              <div class="flex flex-row mb-2">
-                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/>
-                </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">January 1, 10:00am</p>
-              </div>
-              <div class="flex flex-row">
-                <svg class="flex-none w-5 fill-current text-gray-500 ml-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                </svg>
-                <p class="text-gray-700 font-Noto-Sans-JP text-base">Location</p>
-              </div>
+        <div class="relative h-48 bg-white p-4 flex flex-col justify-between">
+          <!--Background svg-->
+          <svg class="absolute bottom-0 right-0 fill-current text-gray-800 z-0" width="295" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="300" cy="100" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="100" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="100" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="200" cy="153" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="100" cy="206" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+            <circle cx="300" cy="206" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>
+          </svg>
+
+          <div class="z-10">
+            <h4 class="mb-4 text-gray-800 font-Montserrat font-semibold text-lg truncate">Event</h4>
+            <div class="flex flex-row mb-2">
+              <svg class="flex-none w-6 fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-7.59V4h2v5.59l3.95 3.95-1.41 1.41L9 10.41z"/>
+              </svg>
+              <p class="text-gray-600 font-Montserrat text-lg truncate">10AM</p>
             </div>
-            <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">View event</a>
+            <div class="flex flex-row">
+              <svg class="flex-none w-6 fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+              </svg>
+              <p class="text-gray-600 font-Montserrat text-lg truncate">Location</p>
+            </div>
+          </div>
+          <div class="z-10 flex flex-row justify-between">
+            <a class="flex flex-row w-2/5 bg-red-400 py-2 px-4 rounded-full text-red-100" href="#" target="_blank" title="Google Calendar Event">
+              <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 3h2v2h6V3h2v2h2c1.1046 0 2 .8954 2 2v7h-2V9H5v10h9v2H5c-1.1046 0-2-.8954-2-2V7c0-1.1046.8954-2 2-2h2V3zm2 8H7v2h2v-2zm6 0h2v2h-2v-2zm-2 0h-2v2h2v-2zm-6 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm3 1v2h-2v2h2v2h2v-2h2v-2h-2v-2h-2z"/>
+              </svg>
+              <p class="w-full text-center font-Montserrat font-semibold text-base truncate">Calendar</p>
+            </a>
+            <a class="flex flex-row w-2/5 bg-red-400 py-2 px-4 rounded-full text-red-100" href="#" target="_blank" title="Facebook Event Page">
+              <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M18 3H6C4.3431 3 3 4.3431 3 6v12c0 1.6569 1.3431 3 3 3h4.5938v-6.3984H8.3086V12h2.2852v-1.9828c0-2.2553 1.3429-3.5016 3.3996-3.5016.9843 0 2.0144.1758 2.0144.1758v2.2149h-1.1355c-1.118 0-1.4661.6943-1.4661 1.4062V12h2.4961l-.399 2.6016h-2.0971V21H18c1.6569 0 3-1.3431 3-3V6c0-1.6569-1.3431-3-3-3z"/>
+              </svg>
+              <p class="w-full text-center font-Montserrat font-semibold text-base truncate">View</p>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -119,27 +206,27 @@
 
     <!--More JSA Header-->
     <div class="w-full bg-red-200 flex flex-wrap items-baseline self-start">
-      <h2 class="ml-6 mt-8 font-Montserrat text-2xl text-gray-700 font-semibold">More Info</h2>
+      <h2 class="ml-6 mt-8 font-Montserrat text-xl text-gray-800 font-semibold">More Info</h2>
     </div>
 
     <!--Info Paragraphs-->
-    <div class="flex flex-col md:flex-row justify-center w-full p-8 md:py-12 bg-red-200">
-      <div class="mb-8 bg-red-100 rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col md:mr-20">
-        <h2 class="mb-2 font-Montserrat text-2xl text-gray-700 font-medium">Looking to practice Japanese?</h2>
-        <p class="mb-6 font-Noto-Sans-JP text-gray-700">Lorem ipsum Language Table dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie at elementum eu facilisis sed. Ante in nibh mauris cursus mattis. Ac tortor dignissim convallis aenean et. Ac odio tempor orci dapibus ultrices in iaculis.</p>
-        <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="#" target="_blank" title="Facebook Event Page">Find out more</a>
+    <div class="flex flex-col md:flex-row justify-center items-center w-full p-8 md:py-12 bg-red-200">
+      <div class="mb-8 bg-white rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col md:mr-20">
+        <h2 class="mb-2 font-Montserrat text-lg text-gray-800 font-semibold">Looking to practice Japanese?</h2>
+        <p class="mb-6 font-Montserrat text-gray-600 text-lg">JSA offers a Language Table every Friday from 5-6pm at Cafe Ventanas to help you practice your Japanese or English. Beginner, intermediate, advanced – all levels are welcome! It’s a great opportunity to practice your speaking while meeting new people who share the same interests as you!</p>
+        <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Montserrat font-semibold text-base" href="#" target="_blank" title="Facebook Event Page">Find out more</a>
       </div>
-      <div class="mb-8 bg-red-100 rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col">
-          <h2 class="mb-2 font-Montserrat text-2xl text-gray-700 font-medium">Want more JSA?</h2>
-          <p class="mb-6 font-Noto-Sans-JP text-gray-700">Lorem ipsum JSA Hangout dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie at elementum eu facilisis sed. Ante in nibh mauris cursus mattis. Ac tortor dignissim convallis aenean et. Ac odio tempor orci dapibus ultrices in iaculis.</p>
-          <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Noto-Sans-JP text-base" href="https://www.facebook.com/groups/217738491769779/" target="_blank" title="JSA Hangout Page">View page</a>
+      <div class="mb-8 bg-white rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col">
+          <h2 class="mb-2 font-Montserrat text-lg text-gray-800 font-semibold">Want more JSA?</h2>
+          <p class="mb-6 font-Montserrat text-gray-600 text-lg">JSA Hangouts is a Facebook page where anyone can make casual posts to hang out with their JSA friends outside of our events! Whether you want to go on a boba run, study at Geisel, or go star gazing at Gliderport, this is the place to post your ‘hangout’ and find your crew. Come join us!</p>
+          <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Montserrat font-semibold text-base" href="https://www.facebook.com/groups/217738491769779/" target="_blank" title="JSA Hangout Page">View page</a>
       </div>
     </div>
 
     <!--Footer-->
     <div class="w-full h-auto bg-red-400 text-red-800">
-      <h4 class="pl-12 pt-8 font-Montserrat text-2xl font-semibold" >Contact us!</h4>
-      <div class="flex flex-row pl-8 pt-4 w-56 justify-around">
+      <h4 class="ml-4 sm:ml-12 mt-8 font-Montserrat text-xl font-semibold" >Contact us!</h4>
+      <div class="flex flex-row sm:ml-8 mt-4 w-56 justify-around">
         <a href="https://www.facebook.com/groups/ucsdjsa/" target="_blank" title="Facebook">
           <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
@@ -158,11 +245,9 @@
           </svg>
         </a>
       </div>
-      <img class="w-40 mt-8 m-auto" src="./img/logo-red-700.png" alt="JSA Logo in Dark Red">
-      <div class="inline-block">
-        
-      </div>
-      <p class="font-Noto-Sans-JP text-red-700 text-center text-sm pt-8 pb-8">© 2019 UCSD JSA. All rights reserved.</p>
+      <img class="w-40 my-8 m-auto" src="./img/logo-red-700.png" alt="JSA Logo in Dark Red">
+      <p class="font-Montserrat text-red-700 text-center pt-2 pb-6">© 2019 UCSD JSA. All rights reserved.</p>
     </div>
+
   </body>
 </html>
