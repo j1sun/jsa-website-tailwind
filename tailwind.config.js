@@ -16,6 +16,12 @@ module.exports = {
           dark: '#b53c50',
         }
       },
+      borderRadius: {
+        'xl': '1.125rem',
+      },
+      boxShadow: {
+        'date': '0px 2px 10px rgba(0, 0, 0, 0.1)',
+      },
     },
   },
   variants: {
