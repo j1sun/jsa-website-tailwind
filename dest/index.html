@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>UCSD JSA</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans+JP:600&display=swap" rel="stylesheet">
+    <title>Home - UCSD JSA</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./animate.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
@@ -19,26 +20,87 @@
     <meta name="msapplication-TileColor" content="#f56565">
     <meta name="msapplication-config" content="./favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
   </head>
-  <body class="bg-red-500 antialiased select-none">
 
-    <div class="flex w-screen h-screen items-center justify-center" >
-      <div class="flex flex-col flex-auto mx-16 max-w-4xl md:flex-row">
-        <div class="max-w-xs m-8 self-center">
-          <img src="./img/logo-white.png" alt="JSA Logo in White">
-        </div>
+  <body class="antialiased bg-red-400 select-none">
 
-        <div class="flex flex-col flex-auto justify-center max-w-sm mx-auto">
-          <p class="text-center text-white font-semibold text-3xl md:text-4xl font-Montserrat">Select language:</p>
-          <a class="btn text my-4 font-Montserrat" href="./en-home.html">English</a>
-          <!--TODO: Remove past opacity and replace with btn and text once Japanese site is done-->
-          <!--<a class="btn text mb-4 font-Noto-Sans-JP opacity-25">日本語</a>-->
-        </div>
+    <!--Page banner-->
+    <div class="flex flex-col justify-center items-center w-full h-auto min-h-screen bg-cover bg-top border-b-4 border-red-400" style="background-image:url(img/bkgd-collage.jpg)">
+      <div class="animated fadeIn slow max-w-xs w-2/3 mt-8 mb-6">
+        <img src="./img/logo-white.png" alt="JSA Logo in White">
+      </div>
+      <div class="animated fadeIn delay-1s flex flex-col w-screen max-w-md items-start">
+        <h1 class="mb-6 mx-8 font-Montserrat font-semibold text-5xl text-white leading-tight">Bringing Japan to UCSD.</h1>
+        <a class="mb-12 mx-8 bg-white rounded-full font-Montserrat font-semibold text-red-500 text-base px-6 py-4" href="./about.html" title="Who we are">Find out who we are</a>
+      </div>
+      <svg class="animated fadeInDown delay-2s inset-x-0 bottom-0 mx-auto w-24 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+      </svg>
+    </div>
+
+    <!--Event Header-->
+    <div class="w-full bg-red-100 flex flex-wrap items-baseline self-start">
+      <h2 class="ml-6 mt-8 mb-4 font-Montserrat text-2xl text-red-900 font-semibold">Upcoming Events</h2>
+    </div>
+
+    <!--Event Cards-->
+    <div id="event-cards" class="flex flex-col md:flex-row md:flex-wrap items-center justify-center w-full pb-8 bg-red-100">
+      <event-card
+        v-for="event in events"
+        v-bind:key="event.id"
+        v-bind:event="event"
+      ></event-card>
+    </div>
+
+    <!--More JSA Header-->
+    <div class="w-full bg-red-200 flex flex-wrap items-baseline self-start">
+      <h2 class="ml-6 mt-8 font-Montserrat text-2xl text-red-900 font-semibold">More Info</h2>
+    </div>
+
+    <!--Info Paragraphs-->
+    <div class="flex flex-col md:flex-row justify-center items-center w-full p-8 md:py-12 bg-red-200">
+      <div class="mb-8 bg-white rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col md:mr-20">
+        <h2 class="mb-2 font-Montserrat text-lg text-gray-800 font-semibold">Looking to practice Japanese?</h2>
+        <p class="mb-6 font-Montserrat text-gray-600 text-lg">JSA offers a Language Table every Friday from 5-6pm at Cafe Ventanas to help you practice your Japanese or English. Beginner, intermediate, advanced – all levels are welcome! It’s a great opportunity to practice your speaking while meeting new people who share the same interests as you!</p>
+        <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Montserrat font-semibold text-base" href="https://www.facebook.com/events/429351577936104/" target="_blank" title="Facebook Event Page">Find out more</a>
+      </div>
+      <div class="mb-8 bg-white rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col">
+          <h2 class="mb-2 font-Montserrat text-lg text-gray-800 font-semibold">Want more JSA?</h2>
+          <p class="mb-6 font-Montserrat text-gray-600 text-lg">JSA Hangouts is a Facebook page where anyone can make casual posts to hang out with their JSA friends outside of our events! Whether you want to go on a boba run, study at Geisel, or go star gazing at Gliderport, this is the place to post your ‘hangout’ and find your crew. Come join us!</p>
+          <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Montserrat font-semibold text-base" href="https://www.facebook.com/groups/217738491769779/" target="_blank" title="JSA Hangout Page">View page</a>
       </div>
     </div>
 
-    <style>
-.btn{background-color:#fff5f5;padding:1rem 4rem;margin-left:2rem;margin-right:2rem;border-radius:9999px}.btn:focus,.btn:hover{background-color:#fff}.text{text-align:center;color:#f56565;font-size:1.875rem;font-weight:600}.text:md{font-size:2.25rem}.text:focus,.text:hover{color:#e53e3e}    </style>
+    <!--Footer-->
+    <div class="w-full h-auto bg-red-400 text-red-800">
+      <h4 class="ml-4 sm:ml-12 mt-8 font-Montserrat text-xl font-semibold" >Contact us!</h4>
+      <div class="flex flex-row sm:ml-8 mt-4 w-56 justify-around">
+        <a href="https://www.facebook.com/groups/ucsdjsa/" target="_blank" title="Facebook">
+          <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/ucsdjsa/" target="_blank" title="Instagram">
+          <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">
+            <path d="M13.4977 6.6511a1.656 1.656 0 0 0-.9489-.9489 2.7659 2.7659 0 0 0-.9284-.1722c-.5273-.024-.6853-.029-2.0204-.029s-1.4932.005-2.0205.029a2.7659 2.7659 0 0 0-.9284.1722 1.656 1.656 0 0 0-.9489.949 2.7659 2.7659 0 0 0-.1722.9283c-.024.5273-.029.6855-.029 2.0205s.005 1.4931.029 2.0204a2.7655 2.7655 0 0 0 .1722.9284 1.656 1.656 0 0 0 .949.949 2.7659 2.7659 0 0 0 .9283.1721c.5272.024.6853.0291 2.0205.0291s1.4933-.005 2.0204-.029a2.7659 2.7659 0 0 0 .9284-.1722 1.656 1.656 0 0 0 .949-.949 2.7655 2.7655 0 0 0 .1721-.9284c.024-.5272.0291-.6853.0291-2.0204s-.005-1.4932-.029-2.0205a2.7659 2.7659 0 0 0-.1722-.9284zM9.6 12.1676A2.5676 2.5676 0 1 1 12.1676 9.6 2.5676 2.5676 0 0 1 9.6 12.1676zm2.669-4.6366a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6z"/>
+            <circle cx="9.6" cy="9.6" r="1.6667"/>
+            <path d="M9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.9699 11.6615a3.6704 3.6704 0 0 1-.2324 1.2137 2.5561 2.5561 0 0 1-1.4623 1.4622 3.6704 3.6704 0 0 1-1.2137.2325c-.5333.0243-.7036.03-2.0615.03s-1.5282-.0057-2.0615-.03a3.6704 3.6704 0 0 1-1.2137-.2324 2.5561 2.5561 0 0 1-1.4623-1.4623 3.6704 3.6704 0 0 1-.2324-1.2137C4.6057 11.1282 4.6 10.958 4.6 9.6s.0057-1.5282.03-2.0615a3.6704 3.6704 0 0 1 .2325-1.2137 2.5561 2.5561 0 0 1 1.4623-1.4623A3.6704 3.6704 0 0 1 7.5385 4.63C8.0718 4.6057 8.242 4.6 9.6 4.6s1.5282.0057 2.0615.03a3.6704 3.6704 0 0 1 1.2137.2325 2.5561 2.5561 0 0 1 1.4623 1.4623 3.6704 3.6704 0 0 1 .2324 1.2137c.0243.5333.03.7036.03 2.0615s-.0057 1.5282-.03 2.0615z"/>
+          </svg>
+        </a>
+        <a href="mailto:ucsdjsa@gmail.com" target="_blank" title="Email">
+          <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zM6.2313 7h7.5196c.3988 0 .1936.5117-.0235.643-.217.131-3.2213 1.947-3.3333 2.0145s-.257.0996-.4028.0996c-.1458 0-.2908-.0322-.4027-.0996-.112-.0674-3.1164-1.8836-3.3334-2.0144C6.0382 7.5117 5.8329 7 6.2313 7zM14 12.5c0 .21-.2517.5-.4445.5h-7.111C6.2517 13 6 12.71 6 12.5V8.8533c0-.0918-.0017-.2115.1719-.1094.2465.1445 3.2656 1.925 3.4167 2.014.151.0888.2569.0995.4027.0995.1458 0 .2517-.0107.4028-.0996s3.1875-1.8689 3.434-2.0134c.1736-.102.1719.0176.1719.1094V12.5z"/>
+          </svg>
+        </a>
+      </div>
+      <img class="w-40 my-8 m-auto" src="./img/logo-red-700.png" alt="JSA Logo in Dark Red">
+      <p class="font-Montserrat text-red-700 text-center pt-2 pb-6">© 2019 UCSD JSA. All rights reserved.</p>
+    </div>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+    <script src="event-cards.js"></script>
   </body>
 </html>

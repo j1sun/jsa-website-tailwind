@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home - UCSD JSA</title>
+    <title>Who We Are - UCSD JSA</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" type="text/css" href="./animate.css">
@@ -24,52 +24,63 @@
 
   <body class="antialiased bg-red-400 select-none">
 
+    <!--Back button-->
+    <a class="absolute top-0 m-8" href="./index.html" title="Return to homepage">
+      <img class="w-24 h-24" src="./img/logo-white.png" alt="JSA Logo">
+    </a>
+
     <!--Page banner-->
-    <div class="flex flex-col justify-center items-center w-full h-auto min-h-screen bg-cover bg-top border-b-4 border-red-400" style="background-image:url(img/bkgd-collage.jpg)">
-      <div class="animated fadeIn slow max-w-xs w-2/3 mt-8 mb-6">
-        <img src="./img/logo-white.png" alt="JSA Logo in White">
-      </div>
-      <div class="animated fadeIn delay-1s flex flex-col w-screen max-w-md items-start">
-        <h1 class="mb-6 mx-8 font-Montserrat font-semibold text-5xl text-white leading-tight">Bringing Japan to UCSD.</h1>
-        <a class="mb-12 mx-8 bg-white rounded-full font-Montserrat font-semibold text-red-500 text-base px-6 py-4" href="./en-about.html" title="Who we are">Find out who we are</a>
-      </div>
-      <svg class="animated fadeInDown delay-2s inset-x-0 bottom-0 mx-auto w-24 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-      </svg>
+    <div class="p-8 flex flex-col justify-center items-center w-full h-screen bg-cover bg-top border-b-4 border-red-400" style="background-image:url(img/bkgd-geisha.jpg)">
+      <h1 class="animated slow fadeIn my-10 text-center font-Montserrat font-semibold text-5xl text-white leading-tight">Who We Are</h1>
     </div>
 
-    <!--Event Header-->
-    <div class="w-full bg-red-100 flex flex-wrap items-baseline self-start">
-      <h2 class="ml-6 mt-8 mb-4 font-Montserrat text-2xl text-red-900 font-semibold">Upcoming Events</h2>
-    </div>
+    <!--Arrow-->
+    <svg class="animated fadeInDown delay-1s absolute inset-x-0 bottom-0 mx-auto w-24 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+    </svg>
 
-    <!--Event Cards-->
-    <div id="event-cards" class="flex flex-col md:flex-row md:flex-wrap items-center justify-center w-full pb-8 bg-red-100">
-      <event-card
-        v-for="event in events"
-        v-bind:key="event.id"
-        v-bind:event="event"
-      ></event-card>
-    </div>
-
-    <!--More JSA Header-->
-    <div class="w-full bg-red-200 flex flex-wrap items-baseline self-start">
-      <h2 class="ml-6 mt-8 font-Montserrat text-2xl text-red-900 font-semibold">More Info</h2>
-    </div>
-
-    <!--Info Paragraphs-->
-    <div class="flex flex-col md:flex-row justify-center items-center w-full p-8 md:py-12 bg-red-200">
-      <div class="mb-8 bg-white rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col md:mr-20">
-        <h2 class="mb-2 font-Montserrat text-lg text-gray-800 font-semibold">Looking to practice Japanese?</h2>
-        <p class="mb-6 font-Montserrat text-gray-600 text-lg">JSA offers a Language Table every Friday from 5-6pm at Cafe Ventanas to help you practice your Japanese or English. Beginner, intermediate, advanced – all levels are welcome! It’s a great opportunity to practice your speaking while meeting new people who share the same interests as you!</p>
-        <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Montserrat font-semibold text-base" href="https://www.facebook.com/events/429351577936104/" target="_blank" title="Facebook Event Page">Find out more</a>
+    <!--Mission statement-->
+    <div class="flex flex-col-reverse md:flex-row items-center justify-center w-full p-8 md:py-12 bg-red-100">
+      <div class="w-full max-w-sm flex flex-col md:mr-12">
+        <h2 class="mb-2 font-Montserrat text-lg text-red-900 font-semibold">Our Mission</h2>
+        <p class="mb-8 font-Montserrat text-lg text-red-800">JSA is a social org that promotes new connections for Japanese and other ethnicities alike, establishing new bonds and spreading Japanese culture through various events held throughout the school year. From weekly language tables to a matsuri festival in the spring that takes up all of Library Walk, our events won’t disappoint you – and we'll welcome you with open arms! So, what are you waiting for? Come out to one of our events – we’re looking forward to seeing you around!</p>
       </div>
-      <div class="mb-8 bg-white rounded-lg p-6 shadow-lg w-full max-w-sm flex flex-col">
-          <h2 class="mb-2 font-Montserrat text-lg text-gray-800 font-semibold">Want more JSA?</h2>
-          <p class="mb-6 font-Montserrat text-gray-600 text-lg">JSA Hangouts is a Facebook page where anyone can make casual posts to hang out with their JSA friends outside of our events! Whether you want to go on a boba run, study at Geisel, or go star gazing at Gliderport, this is the place to post your ‘hangout’ and find your crew. Come join us!</p>
-          <a class="self-start bg-red-400 py-2 px-4 rounded-full text-red-100 font-Montserrat font-semibold text-base" href="https://www.facebook.com/groups/217738491769779/" target="_blank" title="JSA Hangout Page">View page</a>
+      <img class="mb-8 rounded-lg shadow sm:max-w-sm" src="./img/board-photo.jpg" alt="JSA Board Photo">
+    </div>
+
+    <div class="flex flex-col w-full p-8 lg:px-16 lg:py-12 bg-red-200">
+
+      <!--Officers-->
+      <h3 class="font-Montserrat text-2xl text-red-900 font-semibold text-center">Officers</h3>
+      <div id="officer-cards" class="flex flex-col lg:flex-row lg:flex-wrap items-center justify-center w-full mb-12">
+        <board-card
+          v-for="info in officers"
+          v-bind:key="info.id"
+          v-bind:info="info"
+        ></event-card>
+      </div>
+
+      <!--Staff-->
+      <h3 class="font-Montserrat text-2xl text-red-900 font-semibold text-center">Staff</h3>
+      <div id="staff-cards" class="flex flex-col lg:flex-row lg:flex-wrap items-center justify-center w-full">
+        <board-card
+          v-for="info in staff"
+          v-bind:key="info.id"
+          v-bind:info="info"
+        ></event-card>
       </div>
     </div>
+
+    <!--Staff Applications--> <!--Currently disabled
+    <div class="flex flex-col md:flex-row items-center justify-center w-full p-8 md:py-12 bg-red-300">
+        <img class="mb-8 rounded-lg shadow sm:max-w-sm" src="./img/board-funny.jpg" alt="JSA Hangout Logo">
+        <div class="w-full max-w-sm flex flex-col md:ml-12">
+          <h2 class="mb-2 font-Montserrat text-lg text-red-900 font-semibold">Interested in joining JSA Staff?</h2>
+          <p class="mb-6 font-Montserrat text-lg text-red-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie at elementum eu facilisis sed. Ante in nibh mauris cursus mattis. Ac tortor dignissim convallis aenean et. Ac odio tempor orci dapibus ultrices in iaculis.</p>
+          <a class="mb-8 self-start bg-red-100 py-2 px-4 rounded-full text-red-500 font-Montserrat font-semibold text-base" href="#" target="_blank" title="JSA Staff Application">Submit Application</a>
+        </div>
+    </div>
+  -->
 
     <!--Footer-->
     <div class="w-full h-auto bg-red-400 text-red-800">
@@ -98,9 +109,9 @@
     </div>
 
     <!--Scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
-    <script src="event-cards.js"></script>
+    <script src="board-cards.js"></script>
   </body>
 </html>
