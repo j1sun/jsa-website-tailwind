@@ -17,6 +17,9 @@ gulp.task('css', function () {
     .pipe(postcss(plugins))
     .pipe(gulp.dest('./dest'));
 
+  gulp.src('./src/*.js')
+    .pipe(gulp.dest('./dest'));
+
   gulp.src('./src/img/*')
     .pipe(gulp.dest('./dest/img/'));
 

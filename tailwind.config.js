@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      'Noto-Sans-JP': ['"Noto Sans JP"'],
-      'Montserrat': ['Montserrat'],
+      'Noto-Sans-JP': ['"Noto Sans JP"', 'Arial', 'sans-serif'],
+      'Montserrat': ['Montserrat', 'Arial', 'sans-serif'],
     },
     extend: {
       colors: {
