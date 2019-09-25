@@ -1,7 +1,7 @@
 Vue.component('board-card', {
   props: ['info'],
   template: 
-    '<div class="flex flex-col items-center w-full max-w-sm mt-20 mx-8">\
+    '<div class="relative flex flex-col items-center w-full max-w-xs mt-20 mx-8">\
       <img class="rounded-full -my-12 w-32 h-32 object-cover object-top shadow z-40" v-bind:src=info.image v-bind:alt=info.name>\
       <div class="flex flex-col items-center w-full p-6 max-w-sm h-64 bg-white rounded-lg shadow-md">\
         <h4 class="mt-10 text-center font-Montserrat text-lg text-gray-800 font-semibold leading-tight">{{ info.name }}</h4>\

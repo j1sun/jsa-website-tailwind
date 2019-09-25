@@ -8,7 +8,7 @@ Vue.component('event-card', {
     </div>\
     <img class="h-48 w-full object-cover object-top" v-bind:src=event.image alt="Event Image">\
     <div class="relative h-48 bg-white p-4 flex flex-col justify-between">\
-      <svg class="absolute bottom-0 right-0 fill-current text-gray-800 z-0" width="295" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">\
+      <svg class="absolute bottom-0 right-0 fill-current z-0" width="295" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">\
         <circle cx="300" cy="100" r="95" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>\
         <circle cx="300" cy="100" r="65" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>\
         <circle cx="300" cy="100" r="35" fill="#FBFDFF" stroke="#F3F3F3" stroke-width="10"/>\
@@ -81,7 +81,7 @@ function getEvents() {
     .then(function(snapshot) {
       var count = 0;
       snapshot.forEach(function (eventSnapshot) {
-        if (eventSnapshot.child("fbLink") !== "") {
+        if (eventSnapshot.child("fbLink").val()) {
 
           // Create event Object
           var event = eventSnapshot.val();
