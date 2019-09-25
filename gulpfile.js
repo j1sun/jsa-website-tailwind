@@ -20,7 +20,7 @@ gulp.task('css', function () {
   gulp.src('./src/*.js')
     .pipe(gulp.dest('./dest'));
 
-  gulp.src('./src/img/*')
+  gulp.src('./src/img/**/*')
     .pipe(gulp.dest('./dest/img/'));
 
   gulp.src('./src/favicons/*')
