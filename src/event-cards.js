@@ -37,14 +37,14 @@ Vue.component('event-card', {
           <p class="text-gray-600 font-Montserrat text-lg truncate">{{ event.location }}</p>\
         </div>\
       </div>\
-      <div class="z-10 flex flex-row justify-around">\
-        <a class="flex flex-row w-2/5 bg-red-500 py-2 px-4 rounded-full text-red-100" v-bind:href=event.calLink target="_blank" title="Google Calendar Event">\
+      <div class="z-10 flex flex-row justify-between">\
+        <a class="flex flex-row w-2/5 sm:w-40 bg-red-500 py-2 px-4 rounded-full text-red-100" v-bind:href=event.calLink target="_blank" title="Google Calendar Event">\
           <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\
           <path d="M7 3h2v2h6V3h2v2h2c1.1046 0 2 .8954 2 2v7h-2V9H5v10h9v2H5c-1.1046 0-2-.8954-2-2V7c0-1.1046.8954-2 2-2h2V3zm2 8H7v2h2v-2zm6 0h2v2h-2v-2zm-2 0h-2v2h2v-2zm-6 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm3 1v2h-2v2h2v2h2v-2h2v-2h-2v-2h-2z"/>\
           </svg>\
           <p class="w-full text-center font-Montserrat font-semibold text-base truncate">Calendar</p>\
         </a>\
-        <a class="flex flex-row w-2/5 bg-red-500 py-2 px-4 rounded-full text-red-100" v-bind:href=event.fbLink target="_blank" title="Facebook Event Page">\
+        <a class="flex flex-row w-2/5 sm:w-40 bg-red-500 py-2 px-4 rounded-full text-red-100" v-bind:href=event.fbLink target="_blank" title="Facebook Event Page">\
           <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\
             <path d="M18 3H6C4.3431 3 3 4.3431 3 6v12c0 1.6569 1.3431 3 3 3h4.5938v-6.3984H8.3086V12h2.2852v-1.9828c0-2.2553 1.3429-3.5016 3.3996-3.5016.9843 0 2.0144.1758 2.0144.1758v2.2149h-1.1355c-1.118 0-1.4661.6943-1.4661 1.4062V12h2.4961l-.399 2.6016h-2.0971V21H18c1.6569 0 3-1.3431 3-3V6c0-1.6569-1.3431-3-3-3z"/>\
           </svg>\
