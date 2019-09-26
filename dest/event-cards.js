@@ -37,7 +37,7 @@ Vue.component('event-card', {
           <p class="text-gray-600 font-Montserrat text-lg truncate">{{ event.location }}</p>\
         </div>\
       </div>\
-      <div class="z-10 flex flex-row justify-between">\
+      <div class="z-10 flex flex-row justify-around">\
         <a class="flex flex-row w-2/5 bg-red-500 py-2 px-4 rounded-full text-red-100" v-bind:href=event.calLink target="_blank" title="Google Calendar Event">\
           <svg class="hidden sm:block flex-none w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\
           <path d="M7 3h2v2h6V3h2v2h2c1.1046 0 2 .8954 2 2v7h-2V9H5v10h9v2H5c-1.1046 0-2-.8954-2-2V7c0-1.1046.8954-2 2-2h2V3zm2 8H7v2h2v-2zm6 0h2v2h-2v-2zm-2 0h-2v2h2v-2zm-6 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm3 1v2h-2v2h2v2h2v-2h2v-2h-2v-2h-2z"/>\
