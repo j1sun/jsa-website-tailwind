@@ -81,7 +81,12 @@ function getEvents() {
     .then(function(snapshot) {
       var count = 0;
       snapshot.forEach(function (eventSnapshot) {
-        if (eventSnapshot.child("fbLink").val()) {
+
+        // Compare dates
+        var date = new Date(eventSnapshot.child("date").val());
+        var currentDate = new Date();
+
+        if (eventSnapshot.child("fbLink").val() && currentDate.getTime() < date.getTime()) {
 
           // Create event Object
           var event = eventSnapshot.val();
@@ -91,7 +96,6 @@ function getEvents() {
           event.id = count;
 
           // Parse date
-          var date = new Date(event.date);
           event.month = date.toLocaleString('en-us', { month: 'short' });
           event.day = date.getDate();
           // Convert time
