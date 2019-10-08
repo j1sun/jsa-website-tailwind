@@ -75,44 +75,48 @@ var vm = new Vue({
   data: data
 })
 
+var maxCount = 3;
+
 function getEvents() {
-  var events = firebase.database().ref("events").orderByChild("date").limitToFirst(3);
+  var events = firebase.database().ref("events").orderByChild("date");
   events.once("value")
     .then(function(snapshot) {
       var count = 0;
       snapshot.forEach(function (eventSnapshot) {
+        if (count < maxCount) {
+          // Create dates for comparison
+          var date = new Date(eventSnapshot.child("date").val());
+          var currentDate = new Date();
 
-        // Compare dates
-        var date = new Date(eventSnapshot.child("date").val());
-        var currentDate = new Date();
+          // Compare dates and make sure FB link is available
+          if (eventSnapshot.child("fbLink").val() && currentDate.getTime() < date.getTime()) {
 
-        if (eventSnapshot.child("fbLink").val() && currentDate.getTime() < date.getTime()) {
+            // Create event Object
+            var event = eventSnapshot.val();
+            // Get event title from key
+            event.title = eventSnapshot.key;
+            // Set id for Vue
+            event.id = count;
 
-          // Create event Object
-          var event = eventSnapshot.val();
-          // Get event title from key
-          event.title = eventSnapshot.key;
-          // Set id for Vue
-          event.id = count;
+            // Parse date
+            event.month = date.toLocaleString('en-us', { month: 'short' });
+            event.day = date.getDate();
+            // Convert time
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0'+minutes : minutes;
+            event.time = hours + ':' + minutes + ' ' + ampm;
 
-          // Parse date
-          event.month = date.toLocaleString('en-us', { month: 'short' });
-          event.day = date.getDate();
-          // Convert time
-          var hours = date.getHours();
-          var minutes = date.getMinutes();
-          var ampm = hours >= 12 ? 'PM' : 'AM';
-          hours = hours % 12;
-          hours = hours ? hours : 12; // the hour '0' should be '12'
-          minutes = minutes < 10 ? '0'+minutes : minutes;
-          event.time = hours + ':' + minutes + ' ' + ampm;
-
-          // Add event to events
-          data.events.push(event);
-          count++;
+            // Add event to events
+            data.events.push(event);
+            count++;
+          }
         }
+      });
     });
-  });
 }
 
 getEvents();
