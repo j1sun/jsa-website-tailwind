@@ -85,11 +85,11 @@ function getEvents() {
       snapshot.forEach(function (eventSnapshot) {
         if (count < maxCount) {
           // Create dates for comparison
-          var date = new Date(eventSnapshot.child("date").val());
-          var currentDate = new Date();
+          var date = moment(eventSnapshot.child("date").val(), "YYYY-MM-DDTHH:mm:ss", true);
+          var currentDate = moment();
 
           // Compare dates and make sure FB link is available
-          if (eventSnapshot.child("fbLink").val() && currentDate.getTime() < date.getTime()) {
+          if (eventSnapshot.child("fbLink").val() !== "" && currentDate.isBefore(date)) {
 
             // Create event Object
             var event = eventSnapshot.val();
@@ -99,16 +99,10 @@ function getEvents() {
             event.id = count;
 
             // Parse date
-            event.month = date.toLocaleString('en-us', { month: 'short' });
-            event.day = date.getDate();
+            event.month = date.format("MMM");
+            event.day = date.format("DD")
             // Convert time
-            var hours = date.getHours();
-            var minutes = date.getMinutes();
-            var ampm = hours >= 12 ? 'PM' : 'AM';
-            hours = hours % 12;
-            hours = hours ? hours : 12; // the hour '0' should be '12'
-            minutes = minutes < 10 ? '0'+minutes : minutes;
-            event.time = hours + ':' + minutes + ' ' + ampm;
+            event.time = date.format("h:mm A");
 
             // Add event to events
             data.events.push(event);
